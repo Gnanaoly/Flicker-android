@@ -21,3 +21,4 @@ For image cache we have used now for only internal memory.  The future expansati
 #Paging load more support
 
 #ImageLongpress have the option to View the Image details.
+# Memory cache used for 25% of available heap size
