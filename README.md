@@ -14,5 +14,5 @@ An android app that uses the public flickr api to search and display images.
 
 ## External API refrence Used
 
-- [Flicker](https://www.flickr.com/services/api/flickr.photos.search.html)
+- [Flicker-API](https://www.flickr.com/services/api/flickr.photos.search.html)
 
