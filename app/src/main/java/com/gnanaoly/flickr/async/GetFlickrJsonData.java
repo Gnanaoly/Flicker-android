@@ -87,19 +87,22 @@ public class GetFlickrJsonData extends AsyncTask<String, Void, ArrayList<FlickrP
     }
 
     private String createUri(String searchCriteria, Boolean matchAll, String lang) {
+
         AppLog.logDebug(TAG, "createUri: starts");
+
         return Uri.parse(baseURL).buildUpon()
                 .appendQueryParameter("text", searchCriteria)
                 .appendQueryParameter("api_key", "3e7cc266ae2b0e0d78e279ce8e361736")
                 .appendQueryParameter("page", "" + pageNumber).build().toString();
 
-//                .appendQueryParameter("tagmode", matchAll ? "ALL":"ANY")
-//                .appendQueryParameter("lang",lang).build().toString();
+
     }
 
     @Override
     public void onDownloadComplete(String data, DownloadStatus status) {
+
         if (status == DownloadStatus.OK) {
+
             AppLog.logDebug(TAG, "onDownloadComplete: starts status:" + status + "  : " + data);
             photoDataArrayList = new ArrayList<>();
 

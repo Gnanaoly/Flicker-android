@@ -1,5 +1,6 @@
 package com.gnanaoly.flickr.activity;
 
+import android.app.Application;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Handler;
@@ -289,13 +290,13 @@ public class MainActivity extends BaseActivity implements OnDataAvailable, Recyc
                         int totalItemCount = linearLayoutManager.getItemCount();
                         int lastVisiblesItems = linearLayoutManager.findLastCompletelyVisibleItemPosition();
 
-                        System.out.println(" >>>>>> " + visibleItemCount + " : " + totalItemCount + " : " + lastVisiblesItems);
+                        AppLog.logDebug(TAG," >>>>>> " + visibleItemCount + " : " + totalItemCount + " : " + lastVisiblesItems);
 
 
                         if (totalItemCount > 10 && lastVisiblesItems >= (totalItemCount - 10)) {
                             //bottom of list!
 
-                            System.out.println(">>>>>> Load more call ");
+                            AppLog.logDebug(TAG,">>>>>> Load more call ");
 
                             loadMore();
 
@@ -303,12 +304,12 @@ public class MainActivity extends BaseActivity implements OnDataAvailable, Recyc
 
                         } else {
 
-                            System.out.println(">>>>>> Load more call condition fail ");
+                            AppLog.logDebug(TAG,">>>>>> Load more call condition fail ");
                         }
                     }
                 }else{
 
-                    System.out.println(">>>>>> Load more is under process ");
+                    AppLog.logDebug(TAG,">>>>>> Load more is under process ");
                 }
 
             }
