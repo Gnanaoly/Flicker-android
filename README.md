@@ -3,6 +3,7 @@
  
  # MainActivity.java
   An android app that uses the private flickr api(uber api key) to search and display images.
+  
   PhotoScopeType type = PhotoScopeType.PRIVATE
  
  
