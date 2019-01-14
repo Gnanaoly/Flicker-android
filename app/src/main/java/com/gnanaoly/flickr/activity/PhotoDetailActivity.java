@@ -6,8 +6,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
+
 import com.gnanaoly.flickr.R;
 import com.gnanaoly.flickr.loader.ImageLoader;
 import com.gnanaoly.flickr.model.FlickrPhotoDetail;
@@ -70,12 +69,17 @@ public class PhotoDetailActivity extends BaseActivity {
                 Resources resources = getResources();
 
                 ImageView imageView =  findViewById(R.id.PhotoView);
-                Glide.with(this)
-                        .load(photoData.toLink())
-                        .apply(new RequestOptions()
-                                .error(R.drawable.placeholder)
-                        )
-                        .into(imageView);
+
+                ImageLoader imageLoader=new ImageLoader(this);
+                imageLoader.DisplayImage(photoData.toLink(),imageView);
+
+
+//                Glide.with(this)
+//                        .load(photoData.toLink())
+//                        .apply(new RequestOptions()
+//                                .error(R.drawable.placeholder)
+//                        )
+//                        .into(imageView);
 
 
                 TextView title =findViewById(R.id.Photo_title);

@@ -5,8 +5,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
+
 import com.gnanaoly.flickr.R;
 import com.gnanaoly.flickr.loader.ImageLoader;
 import com.gnanaoly.flickr.model.FlickrPhotoDetail;
