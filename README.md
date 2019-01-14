@@ -19,3 +19,5 @@ For image cache we have used now for only internal memory.  The future expansati
 - [Flicker-API](https://www.flickr.com/services/api/flickr.photos.search.html)
 
 #Paging load more support
+
+#ImageLongpress have the option to View the Image details.
